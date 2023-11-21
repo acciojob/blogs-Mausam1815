@@ -31,6 +31,7 @@ public class UserService {
             User user = userOptional.get();
             user.getBlogList().clear();
         }
+        userRepository3.deleteById(userId);
     }
 
     public User updateUser(Integer id, String password){
